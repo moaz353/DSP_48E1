@@ -73,7 +73,7 @@ dual_B_register #(
         .RSTB(RSTB)      , 
         .B   (B)         , 
         .BCIN(BCIN)      , 
-        .in0 (inmode[4]) , 
+        .in0 (inmode_mux_out[4]) , 
         .out1(BCOUT)     ,
         .out2(B_X_mux)   ,
         .out3(B_MULT)
@@ -104,10 +104,10 @@ dual_A_D_pre_adder #(
         .A    (A)         ,
         .Acin (ACIN)      , 
         .D    (D)         , 
-        .in0  (inmode[0]) , 
-        .in1  (inmode[1]) , 
-        .in2  (inmode[2]) , 
-        .in3  (inmode[3]) , 
+        .in0  (inmode_mux_out[0]) , 
+        .in1  (inmode_mux_out[1]) , 
+        .in2  (inmode_mux_out[2]) , 
+        .in3  (inmode_mux_out[3]) , 
         .out1 (ACOUT)     ,  
         .out2 (A_X_mux)   , 
         .out3 (A_MULT)
