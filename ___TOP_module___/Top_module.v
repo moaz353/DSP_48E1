@@ -175,8 +175,8 @@ x_mux  X (
     .in1 (M_mux_out)         , 
     .in2 (P)                 ,
     .in3 ({A_X_mux,B_X_mux}) , 
-    .sel1(opmode[1:0])       ,
-    .sel2(opmode[3:2])       ,
+    .sel1(opmode_mux_out[1:0])       ,
+    .sel2(opmode_mux_out[3:2])       ,
     .out (X_mux_out)           );
 //****
 
@@ -188,8 +188,8 @@ y_mux  Y (
     .in1 (M_mux_out)               , 
     .in2 (48'b0)    ,
     .in3 ({A_X_mux,B_X_mux})       , 
-    .sel1(opmode[1:0])             ,
-    .sel2(opmode[3:2])             ,
+    .sel1(opmode_mux_out[1:0])             ,
+    .sel2(opmode_mux_out[3:2])             ,
     .out (Y_mux_out)                 );
 //****
 
@@ -203,9 +203,9 @@ z_mux Z (
     .in3 (C_mux_out)         , 
     .in4 ({PCIN[30:0],17'b0}), 
     .in5 ({P   [30:0],17'b0}),
-    .sel1(opmode[1:0])       , 
-    .sel2(opmode[3:2])       , 
-    .sel3(opmode[6:4])       ,
+    .sel1(opmode_mux_out[1:0])       , 
+    .sel2(opmode_mux_out[3:2])       , 
+    .sel3(opmode_mux_out[6:4])       ,
     .out (Z_mux_out)           );
 
 //** (---CIN---) 
